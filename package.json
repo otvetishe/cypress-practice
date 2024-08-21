@@ -4,11 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:record": "cypress run --record",
+    "test:reporter": "cypress run --reporter mochawesome",
+    "test:spec": "cypress run --spec",
+    "test:tag": "cypress run --tag",
+    "test:config": "cypress run --config",
+    "test:env": "cypress run --env",
+    "test:global": "cypress run --global"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.13.2"
+    "cypress": "^13.13.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

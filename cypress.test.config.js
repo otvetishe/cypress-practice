@@ -6,7 +6,7 @@ module.exports = defineConfig({
   e2e: {
     env: {
       BASE_URL: "https://www.saucedemo.com/",
-      USER_NAME: "standard_user",
+      USER_NAME: "problem_user",
       PASSWORD: "secret_sauce"
     },
     baseUrl: process.env.BASE_URL,
