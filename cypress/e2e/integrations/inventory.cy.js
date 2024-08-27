@@ -9,7 +9,7 @@ describe('Inventory page functionalities', () => {
 
     beforeEach(() => {
         LoginPage.open();
-        LoginPage.login(testData.userName, testData.password);
+        LoginPage.login(Cypress.env('USER_NAME'), Cypress.env('PASSWORD'));
         cy.url().should('include', '/inventory.html');
       });
 

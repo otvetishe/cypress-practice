@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-21T10:17:50.074Z",
+    "end": "2024-08-21T10:18:01.448Z",
+    "duration": 11374,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "36d43e71-8994-4de5-b822-c9af06223b8f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\integrations\\inventory.cy.js",
+      "file": "cypress\\e2e\\integrations\\inventory.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3f89b9a4-29b8-4db6-9943-0136644e0df2",
+          "title": "Inventory page functionalities",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify UI elements on the Inventory Page",
+              "fullTitle": "Inventory page functionalities Verify UI elements on the Inventory Page",
+              "timedOut": null,
+              "duration": 2357,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_InventoryPage.default.menu.should('be.visible');\n_InventoryPage.default.shoppingCart.should('be.visible');\n_InventoryPage.default.sortDropdown.should('be.visible');",
+              "err": {},
+              "uuid": "39875271-ba23-496e-92b3-6303eb73d99d",
+              "parentUUID": "3f89b9a4-29b8-4db6-9943-0136644e0df2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sorting dropdown is contained 4 options",
+              "fullTitle": "Inventory page functionalities Sorting dropdown is contained 4 options",
+              "timedOut": null,
+              "duration": 977,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_InventoryPage.default.sortDropdown.children('option').should('have.length', 4);",
+              "err": {},
+              "uuid": "4c711209-14bd-4f51-a1cb-664e669693e0",
+              "parentUUID": "3f89b9a4-29b8-4db6-9943-0136644e0df2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can open Shopping Cart page",
+              "fullTitle": "Inventory page functionalities User can open Shopping Cart page",
+              "timedOut": null,
+              "duration": 849,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_InventoryPage.default.clickOnCart();\ncy.url().should('include', '/cart.html');",
+              "err": {},
+              "uuid": "f57db5f6-227c-499c-ad21-577d053b8fc1",
+              "parentUUID": "3f89b9a4-29b8-4db6-9943-0136644e0df2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User open Item page by clicking on Item",
+              "fullTitle": "Inventory page functionalities User open Item page by clicking on Item",
+              "timedOut": null,
+              "duration": 5171,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_InventoryPage.default.selectItemByName(\"Sauce Labs Backpack\");\n_ItemPage.default.itemImage.should('be.visible');\n_ItemPage.default.itemPrice.should('be.visible');\n_ItemPage.default.itemName.should('be.visible');\n_ItemPage.default.addToCartBtn.click();\n_ItemPage.default.removeBtn.should('be.visible');\n_ItemPage.default.removeBtn.click();\n_ItemPage.default.addToCartBtn.should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Remove' within the element: <button#add-to-cart.btn.btn_primary.btn_small.btn_inventory> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Remove' within the element: <button#add-to-cart.btn.btn_primary.btn_small.btn_inventory> but never did.\n    at Context.eval (webpack://cypress-practice/./cypress/e2e/integrations/inventory.cy.js:37:27)",
+                "diff": null
+              },
+              "uuid": "96547fcd-d113-4e76-8486-ed6e1c680317",
+              "parentUUID": "3f89b9a4-29b8-4db6-9943-0136644e0df2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "39875271-ba23-496e-92b3-6303eb73d99d",
+            "4c711209-14bd-4f51-a1cb-664e669693e0",
+            "f57db5f6-227c-499c-ad21-577d053b8fc1"
+          ],
+          "failures": [
+            "96547fcd-d113-4e76-8486-ed6e1c680317"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9354,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

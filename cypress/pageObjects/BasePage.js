@@ -1,8 +1,6 @@
-
-
 export default class BasePage {
     constructor() {
-        this.baseURL = 'https://www.saucedemo.com/';
+        this.baseURL = Cypress.env('BASE_URL');
     }
 
     open(url) {
